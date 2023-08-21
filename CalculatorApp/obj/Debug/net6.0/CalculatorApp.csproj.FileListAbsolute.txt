@@ -1,0 +1,14 @@
+F:\Projects\C#\CalculatorApp\bin\Debug\net6.0\CalculatorApp.exe
+F:\Projects\C#\CalculatorApp\bin\Debug\net6.0\CalculatorApp.deps.json
+F:\Projects\C#\CalculatorApp\bin\Debug\net6.0\CalculatorApp.runtimeconfig.json
+F:\Projects\C#\CalculatorApp\bin\Debug\net6.0\CalculatorApp.dll
+F:\Projects\C#\CalculatorApp\bin\Debug\net6.0\CalculatorApp.pdb
+F:\Projects\C#\CalculatorApp\obj\Debug\net6.0\CalculatorApp.GeneratedMSBuildEditorConfig.editorconfig
+F:\Projects\C#\CalculatorApp\obj\Debug\net6.0\CalculatorApp.AssemblyInfoInputs.cache
+F:\Projects\C#\CalculatorApp\obj\Debug\net6.0\CalculatorApp.AssemblyInfo.cs
+F:\Projects\C#\CalculatorApp\obj\Debug\net6.0\CalculatorApp.csproj.CoreCompileInputs.cache
+F:\Projects\C#\CalculatorApp\obj\Debug\net6.0\CalculatorApp.dll
+F:\Projects\C#\CalculatorApp\obj\Debug\net6.0\refint\CalculatorApp.dll
+F:\Projects\C#\CalculatorApp\obj\Debug\net6.0\CalculatorApp.pdb
+F:\Projects\C#\CalculatorApp\obj\Debug\net6.0\CalculatorApp.genruntimeconfig.cache
+F:\Projects\C#\CalculatorApp\obj\Debug\net6.0\ref\CalculatorApp.dll
