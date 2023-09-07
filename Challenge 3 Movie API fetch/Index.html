@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Information</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        
+        <input type="text" id="movieInput" placeholder="Enter movie name">
+        <button id="searchButton">Search</button>
+        <div class="result">
+            <div class="poster-info">
+                <img id="moviePoster" src="" alt="Movie Poster">
+            </div>
+            <div class="movie-details">
+                <div>
+                    <label for="imdbRating">IMDb Rating:</label>
+                    <p id="imdbRating"></p>
+                </div>
+                <div>
+                    <label for="rottenTomatoes">Rotten Tomatoes Rating:</label>
+                    <p id="rottenTomatoes"></p>
+                </div>
+                <div>
+                    <label for="totalBudget">Total Budget:</label>
+                    <p id="totalBudget"></p>
+                </div>
+                <div>
+                    <label for="totalEarnings">Total Earnings:</label>
+                    <p id="totalEarnings"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

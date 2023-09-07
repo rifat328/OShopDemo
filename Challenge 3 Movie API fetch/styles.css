@@ -1,0 +1,70 @@
+body {
+    font-family: Roboto, sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.result {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.result div {
+    margin-bottom: 10px;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+p {
+    display: inline;
+}
+
+
+.result {
+    margin-top: 20px;
+    display: flex;
+    align-items: center; 
+}
+
+.poster-info {
+    flex: 1; 
+    text-align: center;
+}
+
+.movie-details {
+    flex: 2; 
+    text-align: left;
+    padding-left: 20px; 
+}
+
