@@ -19,7 +19,7 @@ namespace SurvayApplication_NerdCastle.Repository
 
         public bool DeleteQuestion(int questionId)
         {
-            var product = _context.Surveys.FirstOrDefault(s => s.SurveyId == questionId);
+            var product = _context.Questions.FirstOrDefault(s => s.SurveyId == questionId);
             if (product != null)
             {
                 product.IsDeleted = true;

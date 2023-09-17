@@ -6,6 +6,7 @@
         public int SurveyId { get; set; }
         public int QuestionId { get; set; }
         public string ChosenAnswer { get; set; }
+        public bool IsDeleted { get; set; }
 
         // Navigation properties
         public Survey Survey { get; set; }
