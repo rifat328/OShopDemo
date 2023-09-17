@@ -8,9 +8,10 @@
             public string ImageUrl { get; set; }
             public string Question { get; set; }
             public DateTime Date { get; set; }
+        public bool IsDeleted { get; set; }
 
-            // Navigation property to Question
-            public ICollection<Question> Questions { get; set; }
+        // Navigation property to Question
+        public ICollection<Question> Questions { get; set; }
         
     }
 }
