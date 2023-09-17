@@ -1,11 +1,11 @@
 ﻿namespace SurvayApplication_NerdCastle.Interface
 {
-    public interface IRepository<T> where T : class
+    public interface IRepository<T> 
     {
         List<T> GetAll();
         T GetById(int id);
-        void Add(T entity);
-        void Update(T entity);
-        void Delete(int id);
+        bool Add(T entity);
+        bool Update(T entity);
+        bool Delete(int id);
     }
 }

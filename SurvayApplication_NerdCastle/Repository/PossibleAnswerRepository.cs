@@ -1,32 +1,52 @@
-﻿using SurvayApplication_NerdCastle.Interface;
+﻿using Microsoft.EntityFrameworkCore;
+using SurvayApplication_NerdCastle.DataContext;
+using SurvayApplication_NerdCastle.Interface;
+using SurvayApplication_NerdCastle.Models;
 
 namespace SurvayApplication_NerdCastle.Repository
 {
-    public class PossibleAnswerRepository : IRepository<PossibleAnswerRepository>
+    public class PossibleAnswerRepository : IRepository<PossibleAnswer>
     {
-        void IRepository<PossibleAnswerRepository>.Add(PossibleAnswerRepository entity)
+        public SurveyDbContext _context;
+        public PossibleAnswerRepository(SurveyDbContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
         }
 
-        void IRepository<PossibleAnswerRepository>.Delete(int id)
+        public bool Add(PossibleAnswer entity)
         {
-            throw new NotImplementedException();
+            _context.PossibleAnswers.Add(entity);
+            return  _context.SaveChanges() > 0;
         }
 
-        List<PossibleAnswerRepository> IRepository<PossibleAnswerRepository>.GetAll()
+        public bool Delete(int id)
         {
-            throw new NotImplementedException();
+            var product = _context.PossibleAnswers.FirstOrDefault(s => s.PossibleAnswerId == id);
+            if (product != null)
+            {
+                product.IsDeleted = true;
+                return _context.SaveChanges() > 0;
+            }
+            else return false;
         }
 
-        PossibleAnswerRepository IRepository<PossibleAnswerRepository>.GetById(int id)
+        public List<PossibleAnswer> GetAll()
         {
-            throw new NotImplementedException();
+            return _context.PossibleAnswers.Where(p => p.IsDeleted == false).ToList();
         }
 
-        void IRepository<PossibleAnswerRepository>.Update(PossibleAnswerRepository entity)
+        public PossibleAnswer GetById(int id)
         {
-            throw new NotImplementedException();
+
+            var p = _context.PossibleAnswers.Where(s => s.PossibleAnswerId == id).FirstOrDefault();
+
+            return p;
+        }
+
+        public bool Update(PossibleAnswer entity)
+        {
+            _context.PossibleAnswers.Update(entity);
+            return _context.SaveChanges() > 0;
         }
     }
 }
