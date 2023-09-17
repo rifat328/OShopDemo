@@ -3,9 +3,9 @@ using SurvayApplication_NerdCastle.Models;
 
 namespace SurvayApplication_NerdCastle.DataContext
 {
-    public class SurvayDbContext : DbContext
+    public class SurveyDbContext : DbContext
     {
-        public SurvayDbContext(DbContextOptions<SurvayDbContext> options):base(options) 
+        public SurveyDbContext(DbContextOptions<SurveyDbContext> options):base(options) 
         {
             
         }

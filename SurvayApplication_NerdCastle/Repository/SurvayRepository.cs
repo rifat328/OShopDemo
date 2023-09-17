@@ -1,15 +1,15 @@
 ﻿using SurvayApplication_NerdCastle.DataContext;
 using SurvayApplication_NerdCastle.Models;
-using static SurvayApplication_NerdCastle.Repository.SurvayRepository;
+using static SurvayApplication_NerdCastle.Repository.SurveyRepository;
 
 namespace SurvayApplication_NerdCastle.Repository
 {
-    public class SurvayRepository
+    public class SurveyRepository
     {
-        public class ProductRepository 
-        {
-            public SurvayDbContext _context;
-            public ProductRepository(SurvayDbContext dbContext)
+        
+        
+            public SurveyDbContext _context;
+            public SurveyRepository(SurveyDbContext dbContext)
             {
                 _context = dbContext;
             }
@@ -30,34 +30,34 @@ namespace SurvayApplication_NerdCastle.Repository
                 else return false;
             }
 
-            public bool Edit(Product product)
+            public bool Edit(Survey survey)
             {
-                _context.Products.Update(product);
+                _context.Surveys.Update(survey);
                 return _context.SaveChanges() > 0;
             }
 
-            public List<Product> GetAll()
+            public List<Survey> GetAll()
             {
-                return _context.Products.Where(p => p.IsDeleted == false).ToList();
+                return _context.Surveys.Where(p => p.IsDeleted == false).ToList();
             }
 
-            public Product GetProduct(int id)
+            public Survey GetSurvey(int id)
             {
-                var product = _context.Products.Where(p => p.Id == id).FirstOrDefault();
+                var survey = _context.Surveys.Where(s => s.SurveyId == id).FirstOrDefault();
 
-                return product;
+                return survey;
             }
 
-            public Product GetProductByName(string product)
+            public Survey GetSurveyByFirstLetter(string product)
             {
-                var Product = _context.Products.Where(p => p.Name == product).FirstOrDefault();
-                if (Product != null)
+                var Survey = _context.Surveys.Where(s => s.Question == product).FirstOrDefault();
+                if (Survey != null)
                 {
-                    return null;
+                    return Survey;
                 }
-                return Product;
+                return null;
             }
-        }
+        
     }
 }
-}
+
