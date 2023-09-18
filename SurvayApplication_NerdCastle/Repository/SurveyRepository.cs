@@ -7,7 +7,7 @@ namespace SurvayApplication_NerdCastle.Repository
     public class SurveyRepository
     {
         
-        
+
             public SurveyDbContext _context;
             public SurveyRepository(SurveyDbContext dbContext)
             {

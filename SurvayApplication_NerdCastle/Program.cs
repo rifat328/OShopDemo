@@ -1,5 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using SurvayApplication_NerdCastle.DataContext;
+using SurvayApplication_NerdCastle.Interface;
+using SurvayApplication_NerdCastle.Models;
+using SurvayApplication_NerdCastle.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,7 +10,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<SurveyDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("SurvayApplication")));
-
+builder.Services.AddScoped<IRepository<Survey>, SurveyRepository>();
+builder.Services.AddScoped<IRepository<Question>, QuestionRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
